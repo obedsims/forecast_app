@@ -8,7 +8,7 @@ import os
 @st.cache
 def get_energy_data(country_code):
     load_dotenv()
-    api_key = os.environ("token")
+    api_key = os.environ["token"]
     client = EntsoePandasClient(api_key=api_key)
     end = pd.Timestamp.now(tz='Europe/London')
     start = end - pd.DateOffset(months=1)
