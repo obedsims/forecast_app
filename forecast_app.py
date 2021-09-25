@@ -26,7 +26,7 @@ country_code = country_codes[country]
 df = get_energy_data(country_code)
 
 # Plotting an area chart for the total energy generation for the UK
-st.area_chart(df, use_container_width=False)
+st.area_chart(df, use_container_width=False, width=900)
 
 st.markdown("You can also select the regression algorithm, \
         the forecast horizon, and the window length (click/tap the arrow if you can't see the settings).\
