@@ -9,7 +9,7 @@ import os
 def get_energy_data(country_code):
     load_dotenv()
     api_key = os.environ.get("token")
-    client = EntsoePandasClient(api_key=api_key)
+    client = EntsoePandasClient(api_key='f74e1497-3862-4db8-aa92-85a4b67104f1')
     end = pd.Timestamp.now(tz='Europe/London')
     start = end - pd.DateOffset(months=1)
     df = client.query_generation(country_code, start=start, end=end, psr_type=None)
