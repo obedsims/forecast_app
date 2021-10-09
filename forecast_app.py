@@ -1,6 +1,6 @@
 import streamlit as st
 from country_mappings import country_codes
-from country_mappings import COUNTRY_MAPPINGS
+from country_mappings import country_codes
 from entsoe_client import get_energy_data
 from forecast import generate_forecast, calculate_smape
 
@@ -8,7 +8,7 @@ st.title("Forecasting Renewable Energy Generation in the UK")
 st.markdown("Chart One displays the total energy generation composition within the UK,\
              the other charts can be used as forecasts for solar and wind energy.")
 
-country = list(COUNTRY_MAPPINGS.keys())
+country = list(country_codes.keys())
 
 regressor = st.sidebar.selectbox("Select a Regression Algorithm",
                                  ['Linear Regression', 'K-Nearest Neighbors',
