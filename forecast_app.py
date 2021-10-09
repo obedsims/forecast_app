@@ -7,7 +7,8 @@ st.title("Forecasting Renewable Energy Generation in the UK")
 st.markdown("Chart One displays the total energy generation composition within the UK,\
              the other charts can be used as forecasts for solar and wind energy.")
 
-country = 'United Kingdom'
+country = st.sidebar.selectbox(label = "Select a Country", index = 9,
+                               options = list(COUNTRY_MAPPINGS.keys()))
 
 regressor = st.sidebar.selectbox("Select a Regression Algorithm",
                                  ['Linear Regression', 'K-Nearest Neighbors',
