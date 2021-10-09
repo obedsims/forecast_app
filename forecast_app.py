@@ -1,6 +1,5 @@
 import streamlit as st
 from country_mappings import country_codes
-from country_mappings import country_codes
 from entsoe_client import get_energy_data
 from forecast import generate_forecast, calculate_smape
 
