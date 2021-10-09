@@ -1,5 +1,5 @@
 country_codes = {
 
-    'United Kingdom': 'GB'
+    'France':'FR'
 
     }
