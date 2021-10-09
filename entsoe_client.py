@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
 from entsoe import EntsoePandasClient
+from entsoe.mappings import TIMEZONE_MAPPINGS
 import os
 
 # Energy data is obtained from the ENTSOE API
