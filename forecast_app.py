@@ -3,8 +3,8 @@ from country_mappings import country_codes
 from entsoe_client import get_energy_data
 from forecast import generate_forecast, calculate_smape
 
-st.title("Forecasting Renewable Energy Generation in the UK")
-st.markdown("Chart One displays the total energy generation composition within the UK,\
+st.title("Forecasting Renewable Energy Generation")
+st.markdown("Chart One displays the total energy generation composition across a number of EU countries,\
              the other charts can be used as forecasts for solar and wind energy.")
 
 country = st.sidebar.selectbox(label = "Select a Country", index = 9,
@@ -26,7 +26,7 @@ window_length = st.sidebar.slider(label='Window Length',
 country_code = country_codes[country]
 df = get_energy_data(country_code)
 
-# Plotting an area chart for the total energy generation for the UK
+# Plotting an area chart for the total energy generation
 st.area_chart(df, use_container_width=False, width=900)
 
 st.markdown("You can also select the regression algorithm, \
